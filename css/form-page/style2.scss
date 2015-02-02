@@ -1,0 +1,38 @@
+section {
+    .form {
+        justify-content: center;
+        .left {
+            width: 65%;
+            padding-bottom: 2vh;
+            border-left: 1px solid hsla(0, 0%, 0%, 0.14);
+            form {
+                margin: 0 auto;
+                width: 60%;
+                .field {
+                    margin: 1vh 0;
+                }
+                h2 {
+                    align-self: flex-start;
+                    width: 100%;
+                }
+                >div {
+                    margin: 1vh 0;
+                    justify-content: space-between;
+                    >.field {
+                        width: 48%;
+                        margin: 0;
+                    }
+                }
+                .field {
+                    width: 100%;
+                }
+                .field-button {
+                    width: 100%;
+                    .button{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}

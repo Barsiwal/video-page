@@ -1,0 +1,37 @@
+.or{
+    width:65%;
+    margin: 0 auto;
+}
+.right{
+    width: 35%;
+    border-left:1px solid hsla(0, 0%, 0%, 0.14);
+    padding-bottom: 2vh;
+    span{
+        padding:.5vh 0;
+    }
+    .link{
+        a{
+            display: block;
+            text-decoration: none;
+            margin:2vh 0;
+            font-size: 1.5vw;
+            font-weight: bold;
+            text-align: right;
+        }
+        a:hover{
+            color:#282828;
+        }
+    }
+    .button-outer{
+        a{
+            text-decoration: none;
+            display: block;
+            display: flex;
+        }
+        .button{
+            width: 60%;
+            justify-content: flex-end;
+
+        }
+    }
+}

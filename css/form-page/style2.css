@@ -1,0 +1,28 @@
+section .form {
+  justify-content: center; }
+  section .form .left {
+    width: 65%;
+    padding-bottom: 2vh;
+    border-left: 1px solid rgba(0, 0, 0, 0.14); }
+    section .form .left form {
+      margin: 0 auto;
+      width: 60%; }
+      section .form .left form .field {
+        margin: 1vh 0; }
+      section .form .left form h2 {
+        align-self: flex-start;
+        width: 100%; }
+      section .form .left form > div {
+        margin: 1vh 0;
+        justify-content: space-between; }
+        section .form .left form > div > .field {
+          width: 48%;
+          margin: 0; }
+      section .form .left form .field {
+        width: 100%; }
+      section .form .left form .field-button {
+        width: 100%; }
+        section .form .left form .field-button .button {
+          width: 40%; }
+
+/*# sourceMappingURL=style2.css.map */

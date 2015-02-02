@@ -1,0 +1,229 @@
+@import "_normalize.scss";
+@import "_font.scss";
+ $c1:#e5fd2d;
+ $c2:#e327fc;
+ $c3:#ffaf17;
+ $c4:#21caf2;
+ $cmain:#ff4949;
+ a {
+	text-decoration: none;
+	color: black;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+header {
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 25%;
+	div {
+		transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+		display: flex;
+		flex-direction: column;
+		border-bottom: 1vw solid transparent;
+		border-image: url('../images/border.svg') 0 27 27 27 stretch;
+		justify-content: space-between;
+		.follow-click {
+			font-family: 'Amatic SC', cursive;
+			position: absolute;
+			z-index: 100;
+			margin: 20px 0;
+			width: 100%;
+			display: block;
+			padding: 0;
+			text-align: center;
+			cursor: pointer;
+			color: #fff;
+			bottom: 0.3vw;
+			font-size: 2.4vw;
+		}
+		.follow-click:hover,
+		[class^="icon"]:hover {
+			color: #F91D65;
+		}
+		ul {
+			transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+			opacity: 0;
+			margin-top: 25px;
+			display: flex;
+			justify-content: space-around;
+			.icon-facebook {
+				color: #fff;
+				cursor: pointer;
+			}
+			.icon-twitter {
+				color: #fff;
+				cursor: pointer;
+			}
+			.icon-googleplus {
+				color: #fff;
+				cursor: pointer;
+			}
+		}
+	}
+	ul {
+		font-size: 2.8vw;
+		position: absolute;
+		width: 100%;
+		bottom: 9.3vw;
+		li {}
+	}
+}
+header {
+	div.follow {
+		position: absolute;
+		height: 30vw;
+		width: 18%;
+		transform: rotate3d(0, 0, 1, -45deg) translate3d(4.5vw, -23vw, 0);
+	}
+	.follow.expand {
+		ul {
+			opacity: 1;
+			bottom: -4.7vw;
+		}
+	}
+}
+/*-----------------------mobile-----------------------------*/
+
+/*--container---*/
+
+@media screen and (max-device-width: 600px) {
+	video {
+		display: none;
+	}
+	.container {
+		padding: 1px;
+	}
+	/*----------------------@media---------------------------*/
+	body {
+		background: url(../images/mobi-bg.svg) center center fixed no-repeat;
+		background-size: cover;
+	}
+	.main-nav {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		height: 200px;
+		width: 200px;
+		overflow: visible;
+		display: block;
+		position: absolute;
+		z-index: 1000;
+		ul {
+			display: block;
+			span {
+				display: none;
+			}
+			.nav-circle {
+				box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+				z-index: 100;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				height: 35vw;
+				width: 35vw;
+				border-radius: 50%;
+				display: flex;
+				background-color: $cmain;
+				span {
+					align-self: center;
+					margin: 0 auto;
+					display: block;
+					color: #fff;
+					text-align: center;
+					font-family: 'Roboto', sans-serif;
+					font-weight: 300;
+					font-size: 6.8vw;
+					span {
+						font-weight: 300;
+						font-size: 4.8vw;
+					}
+				}
+			}
+			li {
+				transition: .6s all cubic-bezier(.55, 0, .1, 1);
+				cursor: pointer;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			[class^="icon-"] {
+				height: 17vw;
+				width: 17vw;
+				box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+			}
+			li:before {
+				font-size: 9.05vw;
+				color: #fff;
+				align-self: center;
+			}
+			.icon-home {
+				background-color: $c1;
+			}
+			.icon-broadcast {
+				background-color: $c2;
+			}
+			.icon-pacman {
+				background-color: $c3;
+			}
+			.icon-phone {
+				background-color: $c4;
+			}
+		}
+	}
+	.main-nav.expand {
+		ul {
+			.icon-home {
+				bottom: -63vw;
+			}
+			.icon-broadcast {
+				right: -61vw;
+			}
+			.icon-pacman {
+				top: -63vw;
+			}
+			.icon-phone {
+				left: -61vw;
+			}
+		}
+	}
+	header {
+		ul {
+			font-size: 4.9vw;
+			bottom: 13.3vw;
+		}
+		div.follow {
+			width: 25%;
+			transform: rotate3d(0, 0, 1, -34deg) translate3d(3.5vw, -13vw, 0);
+			.follow-click {
+				font-size: 4vw;
+			}
+		}
+		.follow.expand {
+			transform: rotate3d(0, 0, 1, -34deg) translate3d(3.5vw, -5vw, 0);
+			ul {
+				opacity: 1;
+			}
+		}
+	}
+	section.hide {
+		display: none;
+	}
+	.container {
+		background: none;
+	}
+}

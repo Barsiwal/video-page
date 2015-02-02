@@ -1,0 +1,235 @@
+/**************************container***********************/
+@media screen and (min-device-width: 600px) {
+  body {
+    overflow-y: hidden; }
+
+  .container {
+    z-index: 1;
+    position: relative;
+    padding: 1px; }
+    .container header {
+      position: absolute; }
+
+  .main-nav {
+    background-color: rgba(0, 0, 0, 0.92);
+    bottom: 0;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 7vh; }
+    .main-nav ul {
+      padding: 0 1vw;
+      transform: skewX(-30deg);
+      border-right: 1px solid rgba(255, 255, 255, 0.39);
+      border-left: 1px solid rgba(255, 255, 255, 0.39);
+      margin: 0 auto;
+      width: 40%;
+      display: flex;
+      color: #fff; }
+      .main-nav ul li {
+        position: relative;
+        width: 20%;
+        cursor: pointer;
+        padding: 1vw 0;
+        text-align: center;
+        overflow: hidden; }
+        .main-nav ul li div {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+          top: 0; }
+          .main-nav ul li div span {
+            margin: 2vh 0px -.5vh; }
+        .main-nav ul li span {
+          font-family: 'Shadows Into Light', cursive;
+          font-size: 1.2vw;
+          font-weight: 300;
+          display: block;
+          transform: skewX(30deg); }
+      .main-nav ul [class^="icon-"]:before {
+        font-family: 'icomoon';
+        display: none; }
+      .main-nav ul li:hover div {
+        color: #F91D65;
+        top: -6vh; }
+      .main-nav ul .nav-circle {
+        border: none;
+        color: #efefef; }
+        .main-nav ul .nav-circle span {
+          font-family: 'Indie Flower', cursive; }
+          .main-nav ul .nav-circle span span {
+            display: none; }
+
+  .bgvid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-size: cover; } }
+/***********************section*******************************/
+.container {
+  background-color: rgba(0, 0, 0, 0.35); }
+  .container section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .container section h1, .container section h2 {
+      font-family: 'Noto Sans', sans-serif;
+      display: block;
+      text-align: center;
+      margin: 0;
+      padding: 0; }
+    .container section h1 {
+      color: #fff;
+      font-family: 'Amatic SC', cursive;
+      font-size: 4vw;
+      font-variant: small-caps; }
+    .container section h2 {
+      color: #F91D65;
+      font-family: 'Amatic SC', cursive;
+      font-size: 6vw;
+      font-variant: small-caps; }
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("../fonts/Skinny-Regular.otf"); }
+.msg-container {
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 100%; }
+  .msg-container [class^="page"] {
+    transition: left 0.6s cubic-bezier(0.55, 0, 0.1, 1), background 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: center; }
+    .msg-container [class^="page"] div {
+      height: 30vh;
+      transition: height 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+      overflow: hidden;
+      min-width: 100vw;
+      background: url("../images/dotted.png") repeat scroll center center transparent; }
+      .msg-container [class^="page"] div h1, .msg-container [class^="page"] div h2 {
+        cursor: default;
+        font-family: myFirstFont;
+        align-self: center; }
+    .msg-container [class^="page"] div.hide-page {
+      height: 0; }
+  .msg-container [class^="page"].expand-page {
+    left: -100%; }
+  .msg-container .bgvid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-size: cover; }
+  .msg-container .page3 div {
+    z-index: 1; }
+  .msg-container .page2 {
+    background: url("../images/bg-page2.jpg") fixed;
+    background-position: center center;
+    background-size: contain; }
+  .msg-container .page1 {
+    background: url("../images/bg-page3.jpg") fixed;
+    background-position: center center;
+    background-size: contain; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+section nav span {
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  display: block;
+  width: 7vw;
+  height: 7vw;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transform: translateY(-50%); }
+section nav span.prev {
+  left: 0; }
+section nav span.next {
+  right: 0; }
+section nav i {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%; }
+section nav span::before,
+section nav span::after,
+section nav i::before,
+section nav i::after {
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 50%;
+  outline: 1px solid transparent;
+  background: #dbccd0;
+  content: '';
+  transition: transform 0.3s;
+  backface-visibility: hidden; }
+section nav i::before,
+section nav i::after {
+  z-index: 100;
+  height: 0;
+  background: #F91D65;
+  transition: height 0.3s, transform 0.3s; }
+section nav span::before,
+section nav i::before {
+  top: 50%;
+  transform: translateX(-50%) rotate(-135deg);
+  transform-origin: 50% 0%; }
+section nav span.next::before,
+section nav span.next i::before {
+  transform: translateX(-50%) rotate(135deg);
+  transform-origin: 50% 0%; }
+section nav span::after,
+section nav i::after {
+  top: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  transform-origin: 0 0; }
+section nav span.next::after,
+section nav span.next i::after {
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: 100% 0%; }
+section nav span:hover i::before,
+section nav span:hover i::after {
+  height: 50%; }
+section nav span:hover::before,
+section nav span:hover i::before {
+  transform: translateX(-50%) rotate(-125deg); }
+section nav span.next:hover::before,
+section nav span.next:hover i::before {
+  transform: translateX(-50%) rotate(125deg); }
+section nav span:hover::after,
+section nav span:hover i::after {
+  transform: translateX(-50%) rotate(-55deg); }
+section nav span.next:hover::after,
+section nav span.next:hover i::after {
+  transform: translateX(-50%) rotate(55deg); }
+
+/*# sourceMappingURL=main-page.css.map */
